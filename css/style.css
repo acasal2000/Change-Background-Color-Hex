@@ -1,0 +1,16 @@
+#btnChangeBackground{
+    padding: 10px;
+    border: 2px solid gray;
+    background-color: whitesmoke;
+    margin: 0 auto;
+    /* left: 50%; */
+    /* right: 50%; */
+    justify-content: space-around;
+    display: flex;
+}
+
+#hexColor{
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
