@@ -3,13 +3,17 @@ var button = document.getElementById("changeColorBtn");
 var body = document.querySelector("body");
 var hexColor = document.getElementById("hexColor");
 
-const colors = ["#fcba03", "#70633d", "#9466d9", "#cec3de", "#c3d9de", "#53cae6", "#53e69f", "#03ab5a"];
+const hexValues = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+
 
 
 function changeColor(){
+    let hex = "#";
 
-    var colorIndex = parseInt(Math.random()*colors.length);
-    
-    body.style.backgroundColor = colors[colorIndex];
-    hexColor.innerHTML = "HEX: " + colors[colorIndex];
+    for(let i = 0; i < 6; i ++){
+        const colorIndex = Math.floor(Math.random()*hexValues.length);
+        hex += hexValues[colorIndex];
+    }
+    hexColor.innerHTML = "HEX: " + hex;
+    body.style.backgroundColor = hex;
 }
